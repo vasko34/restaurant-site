@@ -1,0 +1,130 @@
+.loginoverlay {
+    background: #0C0B08;
+    border: 1.5px solid rgba(220, 202, 135, 0.2);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 40vw;
+    min-height: 50vh;
+    z-index: 4;
+    padding: 4rem 6rem;    
+}
+
+.loginoverlay p {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 175%;    
+    letter-spacing: 0.04em;
+    color: red;   
+    text-align: center; 
+    max-width: 15.5rem;
+}
+
+.loginoverlay h2 {
+    font-family: 'Cormorant Upright';
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 130%;
+    letter-spacing: 0.04em;    
+    color: #DCCA87;
+    margin-bottom: 2.5rem;
+}
+
+.loginoverlay input {
+    font-family: 'Cormorant Upright';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 175%;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    color: #AAAAAA;
+    background: #0C0C0C;
+    box-sizing: border-box;
+    border: 1px solid #F5EFDB;    
+    padding: 1rem 1rem;    
+    text-align: start;
+    margin-bottom: 1rem;
+}
+
+.loginoverlay button {
+    font-family: 'Cormorant Upright';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 175%;
+    letter-spacing: 0.04em;
+    color: #0C0C0C;
+    background: #DCCA87;
+    border: 1px solid #DCCA87;
+    padding: 0.5rem 2rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.loginoverlay__login,
+.loginoverlay__register {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginoverlay__linevertical {
+    width: 1px;
+    height: 45vh;
+    background-color: rgba(220, 202, 135, 0.5);
+    margin: 0 4rem;
+}
+
+.loginoverlay__linehorizontal {
+    display: none;
+    width: 30vw;
+    height: 1px;
+    background-color: rgba(220, 202, 135, 0.5);
+    margin: 3rem 0;
+}
+
+.loginoverlay__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+    .loginoverlay {
+        flex-direction: column;
+    }
+
+    .loginoverlay__linevertical {
+        display: none;
+    }
+
+    .loginoverlay__linehorizontal {
+        display: flex;
+    }
+
+    .loginoverlay h2 {
+        margin-bottom: 2rem;
+    }    
+}
+
+@media screen and (max-width: 600px) {
+    .loginoverlay {
+        min-width: 30vw;
+        min-height: 50vh;        
+        padding: 2rem 3rem;
+    }
+
+    .loginoverlay__linehorizontal {        
+        width: 50vw;        
+    }
+}
